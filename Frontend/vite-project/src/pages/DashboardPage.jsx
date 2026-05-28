@@ -53,7 +53,7 @@ function DashboardPage() {
     try {
 
       await axios.post(
-    'https://breathe-esg-dashboard-cffd.onrender.com/api/records/${id}/approve/`
+    `https://breathe-esg-dashboard-cffd.onrender.com/api/records/${id}/approve/`
       )
 
       fetchRecords()
