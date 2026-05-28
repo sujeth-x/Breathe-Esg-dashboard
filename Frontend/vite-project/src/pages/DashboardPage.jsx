@@ -31,7 +31,7 @@ function DashboardPage() {
     try {
 
       const response = await axios.get(
-        "http://127.0.0.1:8000/api/records/"
+        "https://breathe-esg-dashboard-cffd.onrender.com/api/records/"
       )
 
       setRecords(response.data)
@@ -53,7 +53,7 @@ function DashboardPage() {
     try {
 
       await axios.post(
-        `http://127.0.0.1:8000/api/records/${id}/approve/`
+    'https://breathe-esg-dashboard-cffd.onrender.com/api/records/${id}/approve/`
       )
 
       fetchRecords()
@@ -69,7 +69,7 @@ function DashboardPage() {
     try {
 
       await axios.post(
-        `http://127.0.0.1:8000/api/records/${id}/reject/`
+        `https://breathe-esg-dashboard-cffd.onrender.com/api/records/${id}/reject/`
       )
 
       fetchRecords()

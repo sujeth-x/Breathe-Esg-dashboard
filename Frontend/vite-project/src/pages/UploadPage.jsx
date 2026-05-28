@@ -31,7 +31,7 @@ function UploadPage() {
     try {
 
       const response = await axios.post(
-        "http://127.0.0.1:8000/api/upload/sap/",
+        "https://breathe-esg-dashboard-cffd.onrender.com/api/upload/sap/",
         formData
       )
 
