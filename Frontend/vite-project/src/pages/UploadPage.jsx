@@ -1,10 +1,15 @@
 import { useState } from "react"
+
 import axios from "axios"
+
 import { useNavigate } from "react-router-dom"
 
 import { FiUploadCloud } from "react-icons/fi"
+
 import { MdDashboard } from "react-icons/md"
+
 import { HiOutlineShieldCheck } from "react-icons/hi"
+
 import { IoLeaf } from "react-icons/io5"
 
 function UploadPage() {
@@ -55,65 +60,14 @@ function UploadPage() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        padding: "40px",
         fontFamily: "Inter, sans-serif",
         position: "relative",
         overflow: "hidden"
       }}
     >
 
-   =
-
-      <div
-        style={{
-          position: "absolute",
-          top: "30px",
-          left: "40px",
-          display: "flex",
-          alignItems: "center",
-          gap: "12px"
-        }}
-      >
-
-        <IoLeaf
-          size={42}
-          color="#16a34a"
-        />
-
-        <div>
-
-          <h2
-            style={{
-              margin: 0,
-              fontSize: "34px",
-              fontWeight: "800",
-              color: "#111827"
-            }}
-          >
-            Breathe
-            <span
-              style={{
-                color: "#16a34a"
-              }}
-            >
-              {" "}ESG
-            </span>
-          </h2>
-
-          <p
-            style={{
-              margin: 0,
-              color: "#94a3b8",
-              fontSize: "14px"
-            }}
-          >
-            Building a Sustainable Tomorrow
-          </p>
-
-        </div>
-
-      </div>
-
-
+      {/* Background Circles */}
 
       <div
         style={{
@@ -141,21 +95,23 @@ function UploadPage() {
         }}
       />
 
+      {/* Main Card */}
 
       <div
         style={{
-          width: "700px",
-          backgroundColor: "rgba(255,255,255,0.88)",
+          width: "820px",
+          backgroundColor: "rgba(255,255,255,0.90)",
           backdropFilter: "blur(10px)",
           borderRadius: "32px",
           padding: "70px",
           textAlign: "center",
           boxShadow: "0 20px 60px rgba(0,0,0,0.08)",
-          zIndex: 5
+          zIndex: 5,
+          margin: "0 auto"
         }}
       >
 
-      
+        {/* Upload Icon */}
 
         <div
           style={{
@@ -179,7 +135,7 @@ function UploadPage() {
 
         </div>
 
-      
+        {/* Heading */}
 
         <h1
           style={{
@@ -200,53 +156,54 @@ function UploadPage() {
           </span>
         </h1>
 
-     
+        {/* Leaf Divider */}
 
-       <div
-  style={{
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    gap: "14px",
-    marginTop: "50px",
-    marginBottom: "35px"
-  }}
->
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "14px",
+            marginTop: "15px",
+            marginBottom: "35px"
+          }}
+        >
 
-  <div
-    style={{
-      width: "75px",
-      height: "2px",
-      backgroundColor: "#d1d5db"
-    }}
-  />
+          <div
+            style={{
+              width: "75px",
+              height: "2px",
+              backgroundColor: "#d1d5db"
+            }}
+          />
 
-  <div
-    style={{
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      marginTop: "10px"
-    }}
-  >
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              marginTop: "6px"
+            }}
+          >
 
-    <IoLeaf
-      size={50}
-      color="#16a34a"
-    />
+            <IoLeaf
+              size={32}
+              color="#16a34a"
+            />
 
-  </div>
+          </div>
 
-  <div
-    style={{
-      width: "75px",
-      height: "2px",
-      backgroundColor: "#d1d5db"
-    }}
-  />
+          <div
+            style={{
+              width: "75px",
+              height: "2px",
+              backgroundColor: "#d1d5db"
+            }}
+          />
 
-</div>
+        </div>
 
+        {/* Subtitle */}
 
         <p
           style={{
@@ -258,7 +215,7 @@ function UploadPage() {
           Upload SAP CSV File
         </p>
 
-      
+        {/* Upload Box */}
 
         <div
           style={{
@@ -271,16 +228,21 @@ function UploadPage() {
           }}
         >
 
-          
+          <FiUploadCloud
+            size={52}
+            color="#16a34a"
+            style={{
+              marginBottom: "20px"
+            }}
+          />
+
           <input
             type="file"
             onChange={(e) =>
               setFile(e.target.files[0])
             }
             style={{
-              marginBottom: "20px",
-              marginLeft:"85px"
-        
+              marginBottom: "20px"
             }}
           />
 
@@ -370,7 +332,7 @@ function UploadPage() {
 
         </div>
 
-        {/* Success Message */}
+    
 
         <p
           style={{
@@ -382,8 +344,7 @@ function UploadPage() {
           {message}
         </p>
 
-        {/* Footer Security */}
-
+        
         <div
           style={{
             marginTop: "45px",
@@ -405,19 +366,6 @@ function UploadPage() {
 
         </div>
 
-      </div>
-
-      {/* Bottom Footer */}
-
-      <div
-        style={{
-          position: "absolute",
-          bottom: "25px",
-          color: "#94a3b8",
-          fontSize: "14px"
-        }}
-      >
-        © 2024 Breathe ESG. All rights reserved.
       </div>
 
     </div>
